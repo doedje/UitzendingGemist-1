@@ -1,12 +1,12 @@
-# ![Apple TV](http://images.apple.com/v/tv/c/images/shared/buy_tv_logo_resized_large.png) Uitzending Gemist 
+# ![Apple TV](https://cloud.githubusercontent.com/assets/1049693/11407062/c1891a92-93b0-11e5-9270-745cf4fa4152.png) Uitzending Gemist 
 
 ```UitzendingGemist``` is an unofficial native application for the Apple TV developed in [Swift](https://developer.apple.com/swift/). It will allow you to browse and watch all video streams of the Nederlandse Publieke Omroep's (e.g. NPO, the Dutch public broadcaster) [Uitzending Gemist](http://www.npo.nl/uitzending-gemist) website on your Apple TV.
 
-![Uitgelicht](/Tips.png)
+![Uitgelicht](https://cloud.githubusercontent.com/assets/1049693/11406777/6ad41a68-93af-11e5-802b-027baf4c74c5.png)
 
 Watching videos is very snappy and almost instantaneous, contrary to streaming from your iDevice to Apple TV over Airplay or using the built-in player in your smart tv.
 
-# Okay, that's great! But how do I get this on my ![Apple TV](http://images.apple.com/v/tv/c/images/shared/buy_tv_logo_resized_large.png)?
+# Okay, that's great! But how do I get this on my ![Apple TV](https://cloud.githubusercontent.com/assets/1049693/11407062/c1891a92-93b0-11e5-9270-745cf4fa4152.png)?
 
 Unfortunately the app cannot be distributed in the Appstore as the NPO does not allow third parties in doing so. However, using a free Apple Developer account you *can* compile it yourself and install it in your own Apple TV 4. 
 
@@ -15,15 +15,15 @@ Unfortunately the app cannot be distributed in the Appstore as the NPO does not 
 - an [Apple TV](http://www.apple.com/tv/) 4th generation (the one that has an AppStore)
 - a recent Apple Computer running ```OS X 10.10.x Yosemite``` or ```OS X 10.11.x El Capitan```
 - a (free) Apple Developer account (signup [here](http://developer.apple.com))
-- a USB-C cable to connect your Apple TV to your Apple Computer
+- a [USB-C cable](http://www.apple.com/nl/shop/product/HHSP2ZM/B/belkin-usb-c-naar-usb-a-oplaadkabel?fnode=85) to connect your Apple TV to your Apple Computer
 
 ## 1. Xcode
 
-The code was developed in [Xcode 7.1.1](https://developer.apple.com/xcode/download/) so you need to have it installed. Continue with the following steps when you have finished installing ```Xcode```.
+The code was developed in [Xcode 7.1.1](https://developer.apple.com/xcode/download/) so you need at least to have that version installed. Continue with the following steps when you have finished installing ```Xcode``` as the next steps require a finished installation.
 
 ## 2. Homebrew
 
-[Homebrew](http://brew.sh) is the missing package manager for OS X, which can be used to install all sorts of open source projects. To install, execute the following from ```Terminal```:
+[Homebrew](http://brew.sh) is the missing package manager for OS X which can be used to install all sorts of open source projects. To install, execute the following command in ```Terminal```:
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -31,7 +31,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ## 3. Carthage
 
-The code relies on a number of dependencies that are managed by the [Carthage](https://github.com/Carthage/Carthage) dependency manager. Before working with the code you first need to [install Carthage](https://github.com/Carthage/Carthage#installing-carthage). In short, execute the following command in ```Terminal```:
+The code relies on a number of dependencies that are managed by the [Carthage](https://github.com/Carthage/Carthage) dependency manager. Before working with the code you first need to [install Carthage](https://github.com/Carthage/Carthage#installing-carthage). Execute the following command in ```Terminal``` to install ```Carthage``` via ```Homebrew```:
 
 ```
 brew install carthage
@@ -74,7 +74,7 @@ Connect the ```Apple TV 4``` using the USB-C cable to your Mac.
 
 See the screenshot below and click on **1** and **2** to get to the screen shown below. Set the bundle identifier (**3**) to some name. This should be something in reverse domain format, for example ```com.JohnAppleseed.UitzendingGemist```.
 
-![Steps](/Steps.png)
+![Steps](https://cloud.githubusercontent.com/assets/1049693/11406776/6ad1989c-93af-11e5-9bea-0fd4a928623b.png)
 
 ## 9. Select the team
 
@@ -96,27 +96,27 @@ You're done! You can disconnect your Apple TV and start watching! :)
 
 ## Highlighted, popular and recently broadcasted programs
 
-![Uitgelicht](/Tips.png)
+![Uitgelicht](https://cloud.githubusercontent.com/assets/1049693/11406777/6ad41a68-93af-11e5-802b-027baf4c74c5.png)
 
 ## All broadcasted programs, by date for the past seven days
 
-![Per Dag](/Daily.png)
+![Per Dag](https://cloud.githubusercontent.com/assets/1049693/11406774/6a6cec4e-93af-11e5-92d1-89cb20ad11c4.png)
 
 ## All shows
 
-![Programma's](/Programs.png)
+![Programma's](https://cloud.githubusercontent.com/assets/1049693/11406775/6a6e21fe-93af-11e5-9c14-ae7af5eb4c1e.png)
 
 ## All episodes for a show
 
-![Series](/Series.png)
+![Series](https://cloud.githubusercontent.com/assets/1049693/11406779/6bd0afa8-93af-11e5-939f-a66914b3f957.png)
 
-## One episode for a show
+## Episode details
 
-![Episode](/Episode.png)
+![Episode](https://cloud.githubusercontent.com/assets/1049693/11406773/6a6b783c-93af-11e5-87ef-382044d8a107.png)
 
 ## Watching an episode
 
-![Player](/Player.png)
+![Player](https://cloud.githubusercontent.com/assets/1049693/11406778/6b7322ca-93af-11e5-81c5-ce1368b2c731.png)
 
 # License
 
