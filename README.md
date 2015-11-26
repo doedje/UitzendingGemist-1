@@ -94,6 +94,10 @@ You're done! You can disconnect your Apple TV and start watching! :)
 
 # Screenshots
 
+## Application Icon
+
+![App Icon](https://www.dropbox.com/s/8ccnhks6gam68f0/parallax%20icon.gif?dl=1)
+
 ## Application screen with Application Icon and Top Shelf image
 
 ![Main Screen](https://cloud.githubusercontent.com/assets/1049693/11430705/e585f7aa-948a-11e5-8b4d-a35dc1ab617a.png)
