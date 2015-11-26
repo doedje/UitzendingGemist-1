@@ -2,7 +2,7 @@
 
 ```UitzendingGemist``` is an unofficial native application for the Apple TV developed in [Swift](https://developer.apple.com/swift/). It will allow you to browse and watch all video streams of the Nederlandse Publieke Omroep's (e.g. NPO, the Dutch public broadcaster) [Uitzending Gemist](http://www.npo.nl/uitzending-gemist) website on your Apple TV.
 
-![Uitgelicht](https://cloud.githubusercontent.com/assets/1049693/11406777/6ad41a68-93af-11e5-802b-027baf4c74c5.png)
+![TopShelf](https://github.com/4np/UitzendingGemist/blob/master/UitzendingGemist/Assets.xcassets/App%20Icon%20&%20Top%20Shelf%20Image.brandassets/Top%20Shelf%20Image.imageset/TopShelf.png?raw=true)
 
 Watching videos is very snappy and almost instantaneous, contrary to streaming from your iDevice to Apple TV over Airplay or using the built-in player in your smart tv.
 
@@ -92,7 +92,11 @@ Finally you are able to compile the program and deploy it onto your Apple TV! Cl
 
 You're done! You can disconnect your Apple TV and start watching! :)
 
-# More screenshots
+# Screenshots
+
+## Application screen with Application Icon and Top Shelf image
+
+![Main Screen](https://cloud.githubusercontent.com/assets/1049693/11430705/e585f7aa-948a-11e5-8b4d-a35dc1ab617a.png)
 
 ## Highlighted, popular and recently broadcasted programs
 
