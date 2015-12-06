@@ -104,7 +104,7 @@ You're done! You can disconnect your Apple TV and start watching! :)
 
 ## Highlighted, popular and recently broadcasted programs
 
-![Uitgelicht](https://cloud.githubusercontent.com/assets/1049693/11406777/6ad41a68-93af-11e5-802b-027baf4c74c5.png)
+![Uitgelicht](https://cloud.githubusercontent.com/assets/1049693/11612593/19595478-9c01-11e5-8308-ec58fb4572a2.png)
 
 ## All broadcasted programs, by date for the past seven days
 
@@ -125,6 +125,10 @@ You're done! You can disconnect your Apple TV and start watching! :)
 ## Watching an episode
 
 ![Player](https://cloud.githubusercontent.com/assets/1049693/11406778/6b7322ca-93af-11e5-81c5-ce1368b2c731.png)
+
+## Live TV and Themed 24 hour Channels
+
+![live-en-thema-kanalen](https://cloud.githubusercontent.com/assets/1049693/11612579/6f603464-9c00-11e5-8bb9-ad400ea5e52a.png)
 
 # License
 
