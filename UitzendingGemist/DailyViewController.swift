@@ -26,9 +26,16 @@ class DailyViewController: UIViewController, UITabBarDelegate, UICollectionViewD
     
     let UGManager = UitzendingGemistManager.sharedInstance
     
+    //MARK: View Lifecycle
+    
+    override func viewWillAppear(animated: Bool) {
+        setFormattedDays()
+    }
+    
     //MARK: Day calculation
     
     func setFormattedDays() {
+        debugPrint("update days")
         for item in tabBar.items! {
             var description = ""
             
