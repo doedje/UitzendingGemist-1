@@ -131,9 +131,9 @@ class UitzendingGemistManager {
                     case .Failure(let error):
                         fail("could not fetch streams (\(error.description))")
                     }
-            }
-            }) { error in
-                fail("could not fetch streams (\(error))")
+                }
+        }) { error in
+            fail("could not fetch streams (\(error))")
         }
     }
     
@@ -147,19 +147,83 @@ class UitzendingGemistManager {
             Alamofire.request(.GET, url, headers: self.getHeaders())
                 .responseJSON { response in
                     switch response.result {
+                        case .Success:
+                            if let value = response.result.value {
+                                let json = JSON(value)
+                                if let finalURL = json["url"].string {
+                                    succeed(finalURL)
+                                }
+                            }
+                        case .Failure(let error):
+                            fail("could not video stream (\(error.description))")
+                    }
+                }
+            }) { error in
+                fail("could not video stream (\(error))")
+        }
+    }
+    
+    //MARK: Live streams
+    
+    func getLiveStreamURL(url: String, success succeed: String -> () = { url in }, failure fail: String -> () = {error in}) {
+        getStreamURL(url, success: { url in
+            Alamofire.request(.GET, url, headers: self.getHeaders())
+                .responseString { response in
+                    switch response.result {
                     case .Success:
                         if let value = response.result.value {
-                            let json = JSON(value)
-                            if let finalURL = json["url"].string {
-                                succeed(finalURL)
+                            do {
+                                let regex = try NSRegularExpression(pattern: "\"(.*)\"", options: NSRegularExpressionOptions.CaseInsensitive)
+                                let matches = regex.matchesInString(value, options: [], range: NSMakeRange(0, value.characters.count))
+                                
+                                if let match = matches.first {
+                                    let range = match.rangeAtIndex(1)
+                                    if let swiftRange = self.rangeFromNSRange(range, forString: value) {
+                                        let streamURL = value.substringWithRange(swiftRange)
+                                        let unescapedStreamURL = streamURL.stringByReplacingOccurrencesOfString("\\", withString: "")
+                                        
+                                        succeed(unescapedStreamURL)
+                                    } else {
+                                        fail("could not match live stream url")
+                                    }
+                                } else {
+                                    fail("could not match live stream url")
+                                }
+                            } catch {
+                                // regex was bad!
+                                fail("could not match live stream url")
                             }
                         }
                     case .Failure(let error):
-                        fail("could not video stream (\(error.description))")
+                        print(error)
+                        fail(error.description)
                     }
-            }
-            }) { error in
-                fail("could not video stream (\(error))")
+                }
+        }) { error in
+            fail(error)
+        }
+    }
+    
+    private func getStreamURL(url: String, success succeed: String -> () = { url in }, failure fail: String -> () = {error in}) {
+        getToken(success: { token in
+            let requestURL = "http://ida.omroep.nl/aapi/?type=jsonp&stream=\(url)&token=\(token)"
+            
+            Alamofire.request(.GET, requestURL, headers: self.getHeaders())
+                .responseJSON { response in
+                    switch response.result {
+                        case .Success:
+                            if let value = response.result.value {
+                                let json = JSON(value)
+                                if let finalURL = json["stream"].string {
+                                    succeed(finalURL)
+                                }
+                            }
+                        case .Failure(let error):
+                            fail("could not get live video stream (\(error.description))")
+                    }
+                }
+        }) { error in
+            fail("could not fetch streams (\(error))")
         }
     }
     

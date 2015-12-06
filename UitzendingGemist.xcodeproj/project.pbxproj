@@ -23,6 +23,8 @@
 		F3642A091C0087D7003F5D38 /* DailyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3642A081C0087D7003F5D38 /* DailyCollectionViewCell.swift */; };
 		F364AED91BFB46D50040BEAB /* StillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F364AED81BFB46D50040BEAB /* StillCollectionViewCell.swift */; };
 		F3759D1A1BFFA8EA00AAD96A /* AZTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3759D191BFFA8EA00AAD96A /* AZTableViewCell.swift */; };
+		F376A1901C140F8500C641BF /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376A18F1C140F8500C641BF /* LiveViewController.swift */; };
+		F376A1921C14121000C641BF /* LiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376A1911C14121000C641BF /* LiveCollectionViewCell.swift */; };
 		F382C99C1C036AC7004141F8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F382C99A1C036ABB004141F8 /* AlamofireImage.framework */; };
 		F382C99D1C036AC7004141F8 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F382C99A1C036ABB004141F8 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F382C99F1C03714F004141F8 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F382C99E1C03714F004141F8 /* UIImageView.swift */; };
@@ -69,6 +71,8 @@
 		F3642A081C0087D7003F5D38 /* DailyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F364AED81BFB46D50040BEAB /* StillCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StillCollectionViewCell.swift; sourceTree = "<group>"; };
 		F3759D191BFFA8EA00AAD96A /* AZTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTableViewCell.swift; sourceTree = "<group>"; };
+		F376A18F1C140F8500C641BF /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		F376A1911C14121000C641BF /* LiveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		F382C99A1C036ABB004141F8 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/tvOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		F382C99E1C03714F004141F8 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Extensions/UIImageView.swift; sourceTree = "<group>"; };
 		F3B6617A1C0490BB00EB2179 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDate.swift; path = Extensions/NSDate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 				F3BFD8A91BF9CBFC0067FA45 /* UitzendingGemist.xcdatamodeld */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		F376A18E1C140F6500C641BF /* Live Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F376A18F1C140F8500C641BF /* LiveViewController.swift */,
+				F376A1911C14121000C641BF /* LiveCollectionViewCell.swift */,
+			);
+			name = "Live Scene";
 			sourceTree = "<group>";
 		};
 		F3BFD8991BF9CBFC0067FA45 = {
@@ -220,6 +233,7 @@
 		F3E6834A1BFF57450027EC59 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F376A18E1C140F6500C641BF /* Live Scene */,
 				F3E683451BFF56C90027EC59 /* Uitgelicht Scene */,
 				F3E683441BFF56950027EC59 /* Episode Scene */,
 				F3E683471BFF56F90027EC59 /* Series Scene */,
@@ -309,8 +323,10 @@
 				F3759D1A1BFFA8EA00AAD96A /* AZTableViewCell.swift in Sources */,
 				F3E6834C1BFF57730027EC59 /* DailyViewController.swift in Sources */,
 				F3464DEB1BFA791100F3B943 /* PopularCollectionViewCell.swift in Sources */,
+				F376A1901C140F8500C641BF /* LiveViewController.swift in Sources */,
 				F30A537E1BF9F86700A35786 /* FeaturedCollectionViewCell.swift in Sources */,
 				F3B6617F1C0491D900EB2179 /* JSON.swift in Sources */,
+				F376A1921C14121000C641BF /* LiveCollectionViewCell.swift in Sources */,
 				F3464DE71BFA539000F3B943 /* SeriesViewController.swift in Sources */,
 				F3B661851C0498CE00EB2179 /* UitzendingGemistManager.swift in Sources */,
 				F3B6617B1C0490BB00EB2179 /* NSDate.swift in Sources */,

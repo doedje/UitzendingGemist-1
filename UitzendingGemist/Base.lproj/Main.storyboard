@@ -5,6 +5,59 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Live-->
+        <scene sceneID="Xj9-WY-FeI">
+            <objects>
+                <collectionViewController id="kKb-LQ-CkU" customClass="LiveViewController" customModule="UitzendingGemist" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="wev-Uf-aIg">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="50" id="AaX-Z5-b8p">
+                            <size key="itemSize" width="500" height="280"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="50" minY="0.0" maxX="50" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LiveCollectionViewCell" id="6Db-UC-GYG" customClass="LiveCollectionViewCell" customModule="UitzendingGemist" customModuleProvider="target">
+                                <rect key="frame" x="50" y="190" width="500" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="500" height="280"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gaC-eR-TNk">
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="280"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="gaC-eR-TNk" firstAttribute="top" secondItem="6Db-UC-GYG" secondAttribute="top" id="6je-hb-O8P"/>
+                                    <constraint firstAttribute="trailing" secondItem="gaC-eR-TNk" secondAttribute="trailing" id="msZ-4D-fk7"/>
+                                    <constraint firstAttribute="bottom" secondItem="gaC-eR-TNk" secondAttribute="bottom" id="ozF-Pi-c9X"/>
+                                    <constraint firstItem="gaC-eR-TNk" firstAttribute="leading" secondItem="6Db-UC-GYG" secondAttribute="leading" id="xrd-cm-7J3"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="liveImageView" destination="gaC-eR-TNk" id="TYr-Fw-vdM"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="38e-rK-ZCn">
+                            <rect key="frame" x="0.0" y="140" width="1920" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="kKb-LQ-CkU" id="OFt-Ei-kX5"/>
+                            <outlet property="delegate" destination="kKb-LQ-CkU" id="spV-11-iPq"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Live" id="UFU-4L-vp2"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6f-t0-SUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503" y="-1072"/>
+        </scene>
         <!--Uitgelicht-->
         <scene sceneID="agk-ZO-OwF">
             <objects>
@@ -277,6 +330,7 @@
                         <segue destination="0Wv-zE-uBF" kind="relationship" relationship="viewControllers" id="vYv-Gm-pCH"/>
                         <segue destination="EQ1-Qv-dTg" kind="relationship" relationship="viewControllers" id="D6M-Da-57C"/>
                         <segue destination="jYb-G9-LAE" kind="relationship" relationship="viewControllers" id="XlJ-Cb-KIs"/>
+                        <segue destination="kKb-LQ-CkU" kind="relationship" relationship="viewControllers" id="JOe-tQ-t5V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bZ-vb-gWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
